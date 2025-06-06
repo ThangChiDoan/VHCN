@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const API_BASE_URL =
   process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:3001/api";
 
@@ -40,14 +42,14 @@ class ApiService {
     return this.request<T>(endpoint, { method: "GET" });
   }
 
-  async post<T>(endpoint: string, data?: any): Promise<T> {
+  async post<T>(endpoint: string, data?: unknown): Promise<T> {
     return this.request<T>(endpoint, {
       method: "POST",
       body: data ? JSON.stringify(data) : undefined,
     });
   }
 
-  async put<T>(endpoint: string, data?: any): Promise<T> {
+  async put<T>(endpoint: string, data?: unknown): Promise<T> {
     return this.request<T>(endpoint, {
       method: "PUT",
       body: data ? JSON.stringify(data) : undefined,
@@ -58,14 +60,9 @@ class ApiService {
     return this.request<T>(endpoint, { method: "DELETE" });
   }
 
-  // Health check endpoint
-  async healthCheck() {
-    return this.get("/v1/health");
-  }
-
   // Authentication endpoints
   async login(email: string, password: string) {
-    return this.post<{ token: string; user: any }>("/v1/login", {
+    return this.post<{ token: string; user: unknown }>("/v1/login", {
       email,
       password,
     });
@@ -77,7 +74,7 @@ class ApiService {
     password: string,
     passwordConfirmation: string
   ) {
-    return this.post<{ token: string; user: any }>("/v1/register", {
+    return this.post<{ token: string; user: unknown }>("/v1/register", {
       name,
       email,
       password,
@@ -88,3 +85,12 @@ class ApiService {
 
 export const apiService = new ApiService();
 export default apiService;
+
+export async function loginUser(email: string, password: string) {
+  const response = await axios.post(
+    "http://localhost:3000/api/v1/login", // Update with your Rails API URL
+    { user: { email, password } },
+    { headers: { "Content-Type": "application/json" } }
+  );
+  return response.data; // Should include JWT token if successful
+}

@@ -116,10 +116,6 @@ NEXT_PUBLIC_APP_NAME=Fullstack App
 
 ## API Endpoints
 
-### Health Check
-
-- `GET /api/v1/health` - API health status
-
 ## Development
 
 ### Running Both Servers

@@ -128,3 +128,36 @@ Migrating to AddDeviseToUsers (20250606144204)
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 [dotenv] Set [36mPOSTGRES_USER[0m, [36mPOSTGRES_PASSWORD[0m, [36mPOSTGRES_DB[0m, [36mRAILS_ENV[0m, [36mRAILS_SERVE_STATIC_FILES[0m, [36mRAILS_LOG_TO_STDOUT[0m, [36mSECRET_KEY_BASE[0m, [36mFRONTEND_URL[0m, [36mPORT[0m, and [36mBINDING[0m
 [dotenv] Loaded [33m.env[0m
+Started GET "/api/v1/health" for ::1 at 2025-06-06 22:02:08 +0700
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x0000000108317000 @set=#<ActionDispatch::Routing::RouteSet:0x0000000107431e00>, @draw_paths=[#<Pathname:/Users/thangdoan/.rvm/gems/ruby-3.1.2/gems/actionview-7.1.5.1/config/routes>, #<Pathname:/Users/thangdoan/.rvm/gems/ruby-3.1.2/gems/activestorage-7.1.5.1/config/routes>, #<Pathname:/Users/thangdoan/.rvm/gems/ruby-3.1.2/gems/actioncable-7.1.5.1/config/routes>, #<Pathname:/Users/thangdoan/.rvm/gems/ruby-3.1.2/gems/actionmailbox-7.1.5.1/config/routes>, #<Pathname:/Users/thangdoan/.rvm/gems/ruby-3.1.2/gems/actiontext-7.1.5.1/config/routes>, #<Pathname:/Users/thangdoan/VHCN/backend/config/routes>, #<Pathname:/Users/thangdoan/VHCN/backend/config/routes>], @scope=#<ActionDispatch::Routing::Mapper::Scope:0x0000000108316f88 @hash={:path_names=>{:new=>"new", :edit=>"edit"}}, @parent=#<ActionDispatch::Routing::Mapper::Scope:0x0000000106bbe778 @hash=nil, @parent=nil, @scope_level=nil>, @scope_level=nil>, @concerns={}>
+
+  devise_for :users
+  ^^^^^^^^^^):
+  
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/api/v1/health" for ::1 at 2025-06-06 22:02:08 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/health"):
+  
+Started GET "/api/v1/health" for ::1 at 2025-06-06 22:02:52 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/health"):
+  
+Started GET "/api/v1/health" for ::1 at 2025-06-06 22:03:21 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/health"):
+  
+Started GET "/api/v1/health" for ::1 at 2025-06-06 22:04:53 +0700
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x0000000107d3bd70 @set=#<ActionDispatch::Routing::RouteSet:0x0000000107431e00>, @draw_paths=[#<Pathname:/Users/thangdoan/.rvm/gems/ruby-3.1.2/gems/actionview-7.1.5.1/config/routes>, #<Pathname:/Users/thangdoan/.rvm/gems/ruby-3.1.2/gems/activestorage-7.1.5.1/config/routes>, #<Pathname:/Users/thangdoan/.rvm/gems/ruby-3.1.2/gems/actioncable-7.1.5.1/config/routes>, #<Pathname:/Users/thangdoan/.rvm/gems/ruby-3.1.2/gems/actionmailbox-7.1.5.1/config/routes>, #<Pathname:/Users/thangdoan/.rvm/gems/ruby-3.1.2/gems/actiontext-7.1.5.1/config/routes>, #<Pathname:/Users/thangdoan/VHCN/backend/config/routes>, #<Pathname:/Users/thangdoan/VHCN/backend/config/routes>], @scope=#<ActionDispatch::Routing::Mapper::Scope:0x0000000107d3bcf8 @hash={:path_names=>{:new=>"new", :edit=>"edit"}}, @parent=#<ActionDispatch::Routing::Mapper::Scope:0x0000000106bbe778 @hash=nil, @parent=nil, @scope_level=nil>, @scope_level=nil>, @concerns={}>
+
+  devise_for :users
+  ^^^^^^^^^^):
+  
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+[dotenv] Set [36mPOSTGRES_USER[0m, [36mPOSTGRES_PASSWORD[0m, [36mPOSTGRES_DB[0m, [36mRAILS_SERVE_STATIC_FILES[0m, [36mRAILS_LOG_TO_STDOUT[0m, [36mSECRET_KEY_BASE[0m, [36mFRONTEND_URL[0m, [36mPORT[0m, and [36mBINDING[0m
+[dotenv] Loaded [33m.env[0m
