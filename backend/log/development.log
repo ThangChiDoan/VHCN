@@ -81,3 +81,17 @@ Migrating to CreateAddresses (20250606142735)
   [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(445202529619267455)[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Set [36mPOSTGRES_USER[0m, [36mPOSTGRES_PASSWORD[0m, [36mPOSTGRES_DB[0m, [36mRAILS_ENV[0m, [36mRAILS_SERVE_STATIC_FILES[0m, [36mRAILS_LOG_TO_STDOUT[0m, [36mSECRET_KEY_BASE[0m, [36mFRONTEND_URL[0m, [36mPORT[0m, and [36mBINDING[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mPOSTGRES_USER[0m, [36mPOSTGRES_PASSWORD[0m, [36mPOSTGRES_DB[0m, [36mRAILS_ENV[0m, [36mRAILS_SERVE_STATIC_FILES[0m, [36mRAILS_LOG_TO_STDOUT[0m, [36mSECRET_KEY_BASE[0m, [36mFRONTEND_URL[0m, [36mPORT[0m, and [36mBINDING[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mPOSTGRES_USER[0m, [36mPOSTGRES_PASSWORD[0m, [36mPOSTGRES_DB[0m, [36mRAILS_ENV[0m, [36mRAILS_SERVE_STATIC_FILES[0m, [36mRAILS_LOG_TO_STDOUT[0m, [36mSECRET_KEY_BASE[0m, [36mFRONTEND_URL[0m, [36mPORT[0m, and [36mBINDING[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mPOSTGRES_USER[0m, [36mPOSTGRES_PASSWORD[0m, [36mPOSTGRES_DB[0m, [36mRAILS_ENV[0m, [36mRAILS_SERVE_STATIC_FILES[0m, [36mRAILS_LOG_TO_STDOUT[0m, [36mSECRET_KEY_BASE[0m, [36mFRONTEND_URL[0m, [36mPORT[0m, and [36mBINDING[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mPOSTGRES_USER[0m, [36mPOSTGRES_PASSWORD[0m, [36mPOSTGRES_DB[0m, [36mRAILS_ENV[0m, [36mRAILS_SERVE_STATIC_FILES[0m, [36mRAILS_LOG_TO_STDOUT[0m, [36mSECRET_KEY_BASE[0m, [36mFRONTEND_URL[0m, [36mPORT[0m, and [36mBINDING[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mPOSTGRES_USER[0m, [36mPOSTGRES_PASSWORD[0m, [36mPOSTGRES_DB[0m, [36mRAILS_ENV[0m, [36mRAILS_SERVE_STATIC_FILES[0m, [36mRAILS_LOG_TO_STDOUT[0m, [36mSECRET_KEY_BASE[0m, [36mFRONTEND_URL[0m, [36mPORT[0m, and [36mBINDING[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mPOSTGRES_USER[0m, [36mPOSTGRES_PASSWORD[0m, [36mPOSTGRES_DB[0m, [36mRAILS_ENV[0m, [36mRAILS_SERVE_STATIC_FILES[0m, [36mRAILS_LOG_TO_STDOUT[0m, [36mSECRET_KEY_BASE[0m, [36mFRONTEND_URL[0m, [36mPORT[0m, and [36mBINDING[0m
+[dotenv] Loaded [33m.env[0m

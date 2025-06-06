@@ -9,6 +9,13 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get 'health', to: 'health#index'
+      resources :users
+      resources :products
+      resources :categories
+      resources :orders
+      resources :order_items
+      resources :reviews
+      resources :addresses
     end
   end
 
