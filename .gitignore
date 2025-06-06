@@ -1,0 +1,12 @@
+node_modules
+# Ignore environment and sensitive files
+.env
+.env.*
+# Rails credentials and master key
+backend/config/master.key
+backend/config/credentials.yml.enc
+# Other sensitive files
+backend/.env
+backend/.env.*
+frontend/.env
+frontend/.env.*

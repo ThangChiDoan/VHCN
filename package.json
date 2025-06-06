@@ -1,0 +1,23 @@
+{
+  "name": "fullstack-app",
+  "version": "1.0.0",
+  "description": "Fullstack application with Rails API and Next.js frontend",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && rails server",
+    "dev:frontend": "cd frontend && npm run dev",
+    "install:all": "cd backend && bundle install && cd ../frontend && npm install",
+    "setup": "npm run install:all && cd backend && rails db:create && rails db:migrate"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "fullstack",
+    "rails",
+    "nextjs",
+    "postgresql"
+  ],
+  "author": "",
+  "license": "MIT"
+}
