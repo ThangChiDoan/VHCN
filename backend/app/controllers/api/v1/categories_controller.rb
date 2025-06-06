@@ -1,35 +1,35 @@
 class Api::V1::CategoriesController < ApplicationController
   def index
-    categories = Category.all
-    render json: categories
+    @categories = Category.all
+    render :index
   end
 
   def show
-    category = Category.find(params[:id])
-    render json: category
+    @category = Category.find(params[:id])
+    render :show
   end
 
   def create
-    category = Category.new(category_params)
-    if category.save
-      render json: category, status: :created
+    @category = Category.new(category_params)
+    if @category.save
+      render :show, status: :created
     else
-      render json: category.errors, status: :unprocessable_entity
+      render json: @category.errors, status: :unprocessable_entity
     end
   end
 
   def update
-    category = Category.find(params[:id])
-    if category.update(category_params)
-      render json: category
+    @category = Category.find(params[:id])
+    if @category.update(category_params)
+      render :show
     else
-      render json: category.errors, status: :unprocessable_entity
+      render json: @category.errors, status: :unprocessable_entity
     end
   end
 
   def destroy
-    category = Category.find(params[:id])
-    category.destroy
+    @category = Category.find(params[:id])
+    @category.destroy
     head :no_content
   end
 
