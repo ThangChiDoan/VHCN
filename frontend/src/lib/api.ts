@@ -62,6 +62,28 @@ class ApiService {
   async healthCheck() {
     return this.get("/v1/health");
   }
+
+  // Authentication endpoints
+  async login(email: string, password: string) {
+    return this.post<{ token: string; user: any }>("/v1/login", {
+      email,
+      password,
+    });
+  }
+
+  async register(
+    name: string,
+    email: string,
+    password: string,
+    passwordConfirmation: string
+  ) {
+    return this.post<{ token: string; user: any }>("/v1/register", {
+      name,
+      email,
+      password,
+      password_confirmation: passwordConfirmation,
+    });
+  }
 }
 
 export const apiService = new ApiService();
