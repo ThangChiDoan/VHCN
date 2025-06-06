@@ -23,3 +23,61 @@ Processing by Api::V1::HealthController#index as */*
 Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 3662)
 
 
+[dotenv] Set [36mPOSTGRES_USER[0m, [36mPOSTGRES_PASSWORD[0m, [36mPOSTGRES_DB[0m, [36mRAILS_ENV[0m, [36mRAILS_SERVE_STATIC_FILES[0m, [36mRAILS_LOG_TO_STDOUT[0m, [36mSECRET_KEY_BASE[0m, [36mFRONTEND_URL[0m, [36mPORT[0m, and [36mBINDING[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mPOSTGRES_USER[0m, [36mPOSTGRES_PASSWORD[0m, [36mPOSTGRES_DB[0m, [36mRAILS_ENV[0m, [36mRAILS_SERVE_STATIC_FILES[0m, [36mRAILS_LOG_TO_STDOUT[0m, [36mSECRET_KEY_BASE[0m, [36mFRONTEND_URL[0m, [36mPORT[0m, and [36mBINDING[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mPOSTGRES_USER[0m, [36mPOSTGRES_PASSWORD[0m, [36mPOSTGRES_DB[0m, [36mRAILS_ENV[0m, [36mRAILS_SERVE_STATIC_FILES[0m, [36mRAILS_LOG_TO_STDOUT[0m, [36mSECRET_KEY_BASE[0m, [36mFRONTEND_URL[0m, [36mPORT[0m, and [36mBINDING[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mPOSTGRES_USER[0m, [36mPOSTGRES_PASSWORD[0m, [36mPOSTGRES_DB[0m, [36mRAILS_ENV[0m, [36mRAILS_SERVE_STATIC_FILES[0m, [36mRAILS_LOG_TO_STDOUT[0m, [36mSECRET_KEY_BASE[0m, [36mFRONTEND_URL[0m, [36mPORT[0m, and [36mBINDING[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mPOSTGRES_USER[0m, [36mPOSTGRES_PASSWORD[0m, [36mPOSTGRES_DB[0m, [36mRAILS_ENV[0m, [36mRAILS_SERVE_STATIC_FILES[0m, [36mRAILS_LOG_TO_STDOUT[0m, [36mSECRET_KEY_BASE[0m, [36mFRONTEND_URL[0m, [36mPORT[0m, and [36mBINDING[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mPOSTGRES_USER[0m, [36mPOSTGRES_PASSWORD[0m, [36mPOSTGRES_DB[0m, [36mRAILS_ENV[0m, [36mRAILS_SERVE_STATIC_FILES[0m, [36mRAILS_LOG_TO_STDOUT[0m, [36mSECRET_KEY_BASE[0m, [36mFRONTEND_URL[0m, [36mPORT[0m, and [36mBINDING[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mPOSTGRES_USER[0m, [36mPOSTGRES_PASSWORD[0m, [36mPOSTGRES_DB[0m, [36mRAILS_ENV[0m, [36mRAILS_SERVE_STATIC_FILES[0m, [36mRAILS_LOG_TO_STDOUT[0m, [36mSECRET_KEY_BASE[0m, [36mFRONTEND_URL[0m, [36mPORT[0m, and [36mBINDING[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mPOSTGRES_USER[0m, [36mPOSTGRES_PASSWORD[0m, [36mPOSTGRES_DB[0m, [36mRAILS_ENV[0m, [36mRAILS_SERVE_STATIC_FILES[0m, [36mRAILS_LOG_TO_STDOUT[0m, [36mSECRET_KEY_BASE[0m, [36mFRONTEND_URL[0m, [36mPORT[0m, and [36mBINDING[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(445202529619267455)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-06-06 14:27:53.792636', '2025-06-06 14:27:53.792640') RETURNING "key"[0m
+Migrating to CreateUsers (20250606142655)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250606142655') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCategories (20250606142713)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250606142713') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProducts (20250606142717)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "description" text, "price" decimal, "category_id" integer, "stock" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250606142717') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOrders (20250606142720)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "orders" ("id" bigserial primary key, "user_id" integer, "total" decimal, "status" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250606142720') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOrderItems (20250606142725)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "order_items" ("id" bigserial primary key, "order_id" integer, "product_id" integer, "quantity" integer, "price" decimal, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250606142725') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateReviews (20250606142729)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "user_id" integer, "product_id" integer, "rating" integer, "comment" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250606142729') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAddresses (20250606142735)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" bigserial primary key, "user_id" integer, "street" character varying, "city" character varying, "state" character varying, "zip" character varying, "country" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250606142735') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(445202529619267455)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
