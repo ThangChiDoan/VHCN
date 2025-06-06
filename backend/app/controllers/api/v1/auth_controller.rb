@@ -3,8 +3,12 @@ class Api::V1::AuthController < ApplicationController
   def login
     user = User.find_for_database_authentication(email: params[:email])
     if user&.valid_password?(params[:password])
-      token = Warden::JWTAuth::UserEncoder.new.call(user, :user, nil).first
-      render json: { token: token, user: { id: user.id, email: user.email, name: user.name } }, status: :ok
+      if user.confirmed?
+        token = Warden::JWTAuth::UserEncoder.new.call(user, :user, nil).first
+        render json: { token: token, user: { id: user.id, email: user.email, name: user.name } }, status: :ok
+      else
+        render json: { error: 'Email not confirmed' }, status: :unauthorized
+      end
     else
       render json: { error: 'Invalid email or password' }, status: :unauthorized
     end
